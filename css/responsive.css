@@ -82,15 +82,20 @@
   .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; padding-bottom: 24px; }
   .footer-brand-desc { max-width: 100%; }
 
-  .navbar .container { padding-top: 6px; padding-bottom: 6px; padding-left: 16px; padding-right: 8px; }
+  .navbar .container { padding-top: 6px; padding-bottom: 6px; padding-left: 20px; padding-right: 32px; }
   .nav-logo { font-size: 16px; gap: 6px; }
   .nav-logo-icon { width: 28px; height: 28px; font-size: 14px; border-radius: 8px; }
-  .nav-toggle span { width: 22px; height: 2px; }
-  .nav-menu { position: fixed; top: 48px; left: 0; right: 0; background: var(--white); flex-direction: column; gap: 0; padding: 6px 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); transition: all 0.3s ease; overflow-y: auto; max-height: calc(100vh - 48px); }
+  .nav-menu { position: fixed; top: 48px; left: 0; width: 100%; background: var(--white); flex-direction: column; gap: 0; padding: 8px 0 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); transition: transform 0.3s ease, opacity 0.3s ease; overflow-y: auto; max-height: calc(100vh - 48px); }
+  .nav-menu .nav-link { padding: 5px 24px; width: 100%; box-sizing: border-box; font-size: 13px; }
+  .nav-menu .nav-dropdown-toggle { padding: 5px 24px; width: 100%; box-sizing: border-box; font-size: 13px; text-align: left; justify-content: flex-start; gap: 6px; }
   .nav-menu.active { transform: translateY(0); opacity: 1; }
-  .nav-toggle { display: flex; }
-  .nav-link, .nav-dropdown-toggle { padding: 6px 0; width: 100%; font-size: 13px; }
-  .nav-dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; padding: 0 0 0 10px; display: none; min-width: auto; }
+  .nav-toggle { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; z-index: 1001; }
+  .nav-link, .nav-dropdown-toggle { padding: 5px 0; width: 100%; font-size: 13px; }
+  .nav-dropdown-link { padding: 5px 24px; font-size: 12px; gap: 6px; justify-content: flex-start; }
+  .nav-dropdown-toggle .chevron { color: var(--green); font-size: 10px; }
+  .nav-dropdown-icon { width: 26px; height: 26px; font-size: 13px; }
+  .nav-dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; padding: 0; display: none; min-width: auto; }
+  .nav-dropdown-menu .nav-dropdown-link { padding-left: 24px; }
   .nav-dropdown.open .nav-dropdown-menu { display: block; }
 
   .btn { width: 100%; justify-content: center; padding: 12px 20px; font-size: 14px; }
