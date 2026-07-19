@@ -1,6 +1,19 @@
 .stats-section {
   background: var(--white);
   position: relative;
+  margin-top: 0;
+}
+
+.stats-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--green), var(--green-light));
+  border-radius: 2px;
 }
 
 .stats-grid {

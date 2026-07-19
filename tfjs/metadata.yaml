@@ -1,0 +1,29 @@
+description: Ultralytics YOLO26n model trained on /kaggle/input/datasets/cochorex/trash-dataset/dataset/data.yaml
+author: Ultralytics
+date: '2026-06-29T04:15:53.223826'
+version: 8.4.82
+license: AGPL-3.0 License (https://ultralytics.com/license)
+docs: https://docs.ultralytics.com
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: cloth_recycle
+  1: glass_recycle
+  2: hazardous_recycle
+  3: incinerable
+  4: metal_recycle
+  5: organic
+  6: paper_recycle
+  7: plastic_recycle
+args:
+  data: null
+  batch: 1
+  fraction: 1.0
+  quantize: null
+  nms: false
+channels: 3
+end2end: true
