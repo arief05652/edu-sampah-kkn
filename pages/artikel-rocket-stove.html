@@ -50,6 +50,31 @@
     .apd-card h4 { font-weight: 700; color: var(--green-dark); font-size: 0.85rem; }
     .apd-card p { font-size: 0.75rem; color: var(--gray); }
     .artikel-footnote { margin-top: 2.2rem; text-align: center; font-size: 0.8rem; color: var(--gray); border-top: 1px solid #d8e6d4; padding-top: 1.2rem; }
+
+  /* HIRARC Cards */
+  .hirarc-section { margin: 1.5rem 0; }
+  .hirarc-section .section-card-title { margin-bottom: 1rem; }
+  .hirarc-grid { display: flex; flex-direction: column; gap: 1rem; }
+  .hirarc-card { background: var(--white); border-radius: 1.5rem; padding: 1.2rem 1.5rem; border: 2px solid #dbead8; border-left: 6px solid var(--gray); }
+  .hirarc-card.level-rendah { border-left-color: #4CAF50; background: linear-gradient(135deg, #f1f8e9, #e8f5e9); }
+  .hirarc-card.level-sedang { border-left-color: #FF9800; background: linear-gradient(135deg, #fff8e1, #fff3e0); }
+  .hirarc-card.level-tinggi { border-left-color: #f44336; background: linear-gradient(135deg, #fce4ec, #ffebee); }
+  .hirarc-card-title { font-weight: 700; font-size: 1rem; color: var(--text-dark); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+  .hirarc-level-badge { font-size: 0.65rem; font-weight: 600; padding: 2px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .hirarc-level-badge.rendah { background: #4CAF50; color: var(--white); }
+  .hirarc-level-badge.sedang { background: #FF9800; color: var(--white); }
+  .hirarc-level-badge.tinggi { background: #f44336; color: var(--white); }
+  .hirarc-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; margin-top: 4px; }
+  .hirarc-detail-item { font-size: 0.85rem; }
+  .hirarc-detail-item .label { font-weight: 600; color: var(--gray-dark); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.3px; }
+  .hirarc-detail-item .value { color: var(--text-dark); line-height: 1.5; }
+  .hirarc-control { grid-column: 1 / -1; background: rgba(46,125,50,0.08); border-radius: 12px; padding: 8px 14px; margin-top: 4px; }
+  .hirarc-control .label { font-weight: 600; color: var(--green-dark); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.3px; }
+  .hirarc-control .value { font-size: 0.85rem; color: var(--text-dark); line-height: 1.5; }
+  @media (max-width: 500px) {
+    .hirarc-detail { grid-template-columns: 1fr; gap: 4px; }
+    .hirarc-card { padding: 1rem; }
+  }
     @media (max-width: 650px) {
       .artikel-body h1 { font-size: 1.5rem; }
       .section-card { padding: 1.2rem 1rem; }
@@ -92,8 +117,8 @@
     <div class="container">
       <a href="artikel.html" style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--green);margin-bottom:12px;">← Kembali ke Artikel</a>
       <span class="section-label">Panduan</span>
-      <h1 class="section-title">Manual Pengoperasian Rocket Stove</h1>
-      <p class="section-subtitle">Panduan lengkap penggunaan Rocket Stove untuk pembakaran sampah yang aman dan efektif.</p>
+      <h1 class="section-title">Panduan Pengoperasian Rocket Stove yang Aman dan Efektif</h1>
+      <p class="section-subtitle">Dilengkapi SOP Pengoperasian dan Analisis Risiko (HIRARC)</p>
     </div>
   </section>
 
@@ -164,6 +189,202 @@
         <div class="peringatan-item"><span class="warn-icon">⚠️</span> Jangan memasukkan bahan mudah meledak: baterai, kaleng aerosol, tabung gas, limbah medis.</div>
         <div class="peringatan-item"><span class="warn-icon">⚠️</span> Anak-anak tidak diizinkan mengoperasikan tanpa pengawasan orang dewasa.</div>
         <div class="peringatan-item"><span class="warn-icon">⚠️</span> Pastikan area sekitar bebas dari bahan mudah terbakar.</div>
+      </div>
+
+      <div class="hirarc-section">
+        <div class="section-card-title">📋 Analisis Risiko — Metode HIRARC</div>
+        <div class="hirarc-grid">
+
+          <div class="hirarc-card level-sedang">
+            <div class="hirarc-card-title">
+              🟡 Persiapan Sebelum Pengoperasian
+              <span class="hirarc-level-badge sedang">Sedang</span>
+            </div>
+            <div class="hirarc-detail">
+              <div class="hirarc-detail-item">
+                <div class="label">⚡ Bahaya</div>
+                <div class="value">Tangki Spray Mist kosong.</div>
+              </div>
+              <div class="hirarc-detail-item">
+                <div class="label">⚠️ Risiko</div>
+                <div class="value">Asap tidak dapat dikurangi saat pembakaran.</div>
+              </div>
+              <div class="hirarc-control">
+                <div class="label">✅ Pengendalian</div>
+                <div class="value">Periksa tangki air sebelum memulai pembakaran.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hirarc-card level-sedang">
+            <div class="hirarc-card-title">
+              🟡 Persiapan
+              <span class="hirarc-level-badge sedang">Sedang</span>
+            </div>
+            <div class="hirarc-detail">
+              <div class="hirarc-detail-item">
+                <div class="label">⚡ Bahaya</div>
+                <div class="value">Ventilasi udara tersumbat.</div>
+              </div>
+              <div class="hirarc-detail-item">
+                <div class="label">⚠️ Risiko</div>
+                <div class="value">Api sulit menyala dan menghasilkan asap berlebih.</div>
+              </div>
+              <div class="hirarc-control">
+                <div class="label">✅ Pengendalian</div>
+                <div class="value">Bersihkan ventilasi sebelum digunakan.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hirarc-card level-tinggi">
+            <div class="hirarc-card-title">
+              🔴 Menyalakan Api
+              <span class="hirarc-level-badge tinggi">Tinggi</span>
+            </div>
+            <div class="hirarc-detail">
+              <div class="hirarc-detail-item">
+                <div class="label">⚡ Bahaya</div>
+                <div class="value">Kontak langsung dengan api.</div>
+              </div>
+              <div class="hirarc-detail-item">
+                <div class="label">⚠️ Risiko</div>
+                <div class="value">Luka bakar pada tangan.</div>
+              </div>
+              <div class="hirarc-control">
+                <div class="label">✅ Pengendalian</div>
+                <div class="value">Gunakan sarung tangan dan alat pemantik panjang.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hirarc-card level-sedang">
+            <div class="hirarc-card-title">
+              🟡 Memasukkan Sampah
+              <span class="hirarc-level-badge sedang">Sedang</span>
+            </div>
+            <div class="hirarc-detail">
+              <div class="hirarc-detail-item">
+                <div class="label">⚡ Bahaya</div>
+                <div class="value">Memasukkan sampah terlalu banyak.</div>
+              </div>
+              <div class="hirarc-detail-item">
+                <div class="label">⚠️ Risiko</div>
+                <div class="value">Pembakaran tidak sempurna dan menghasilkan asap pekat.</div>
+              </div>
+              <div class="hirarc-control">
+                <div class="label">✅ Pengendalian</div>
+                <div class="value">Masukkan sampah sedikit demi sedikit.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hirarc-card level-sedang">
+            <div class="hirarc-card-title">
+              🟡 Monitoring Pembakaran
+              <span class="hirarc-level-badge sedang">Sedang</span>
+            </div>
+            <div class="hirarc-detail">
+              <div class="hirarc-detail-item">
+                <div class="label">⚡ Bahaya</div>
+                <div class="value">Asap keluar cukup banyak.</div>
+              </div>
+              <div class="hirarc-detail-item">
+                <div class="label">⚠️ Risiko</div>
+                <div class="value">Gangguan pernapasan dan berkurangnya jarak pandang.</div>
+              </div>
+              <div class="hirarc-control">
+                <div class="label">✅ Pengendalian</div>
+                <div class="value">Tekan tombol Spray Mist secara manual hingga asap berkurang.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hirarc-card level-sedang">
+            <div class="hirarc-card-title">
+              🟡 Monitoring Pembakaran
+              <span class="hirarc-level-badge sedang">Sedang</span>
+            </div>
+            <div class="hirarc-detail">
+              <div class="hirarc-detail-item">
+                <div class="label">⚡ Bahaya</div>
+                <div class="value">Operator terlalu dekat dengan pintu pembakaran.</div>
+              </div>
+              <div class="hirarc-detail-item">
+                <div class="label">⚠️ Risiko</div>
+                <div class="value">Terpapar panas tinggi.</div>
+              </div>
+              <div class="hirarc-control">
+                <div class="label">✅ Pengendalian</div>
+                <div class="value">Jaga jarak aman selama proses pembakaran.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hirarc-card level-sedang">
+            <div class="hirarc-card-title">
+              🟡 Mengambil Abu
+              <span class="hirarc-level-badge sedang">Sedang</span>
+            </div>
+            <div class="hirarc-detail">
+              <div class="hirarc-detail-item">
+                <div class="label">⚡ Bahaya</div>
+                <div class="value">Abu masih panas.</div>
+              </div>
+              <div class="hirarc-detail-item">
+                <div class="label">⚠️ Risiko</div>
+                <div class="value">Luka bakar.</div>
+              </div>
+              <div class="hirarc-control">
+                <div class="label">✅ Pengendalian</div>
+                <div class="value">Pastikan Rocket Stove telah dingin sebelum membersihkan abu.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hirarc-card level-rendah">
+            <div class="hirarc-card-title">
+              🟢 Membersihkan Area
+              <span class="hirarc-level-badge rendah">Rendah</span>
+            </div>
+            <div class="hirarc-detail">
+              <div class="hirarc-detail-item">
+                <div class="label">⚡ Bahaya</div>
+                <div class="value">Lantai licin akibat air Spray Mist.</div>
+              </div>
+              <div class="hirarc-detail-item">
+                <div class="label">⚠️ Risiko</div>
+                <div class="value">Terpeleset.</div>
+              </div>
+              <div class="hirarc-control">
+                <div class="label">✅ Pengendalian</div>
+                <div class="value">Bersihkan genangan air setelah pembakaran selesai.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hirarc-card level-tinggi">
+            <div class="hirarc-card-title">
+              🔴 Pengoperasian Umum
+              <span class="hirarc-level-badge tinggi">Tinggi</span>
+            </div>
+            <div class="hirarc-detail">
+              <div class="hirarc-detail-item">
+                <div class="label">⚡ Bahaya</div>
+                <div class="value">Anak-anak berada di sekitar Rocket Stove.</div>
+              </div>
+              <div class="hirarc-detail-item">
+                <div class="label">⚠️ Risiko</div>
+                <div class="value">Cedera akibat panas atau api.</div>
+              </div>
+              <div class="hirarc-control">
+                <div class="label">✅ Pengendalian</div>
+                <div class="value">Pastikan Rocket Stove hanya dioperasikan oleh orang dewasa.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <div class="artikel-footnote">
