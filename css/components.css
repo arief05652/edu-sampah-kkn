@@ -783,6 +783,15 @@
   align-items: center;
   font-size: 13px;
   opacity: 0.4;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.footer-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
 }
 
 @media (max-width: 968px) {
